@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cinema-search/static/css/main.141f75ec.css",
+    "main.js": "/cinema-search/static/js/main.c788c84d.js",
+    "index.html": "/cinema-search/index.html",
+    "static/media/search.svg": "/cinema-search/static/media/search.b416605642fcb3f2447edc96c1a80e05.svg",
+    "main.141f75ec.css.map": "/cinema-search/static/css/main.141f75ec.css.map",
+    "main.c788c84d.js.map": "/cinema-search/static/js/main.c788c84d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.141f75ec.css",
+    "static/js/main.c788c84d.js"
+  ]
+}
