@@ -1,0 +1,201 @@
+/* Updated App.css */
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+  --primary-color: #f5c518;
+  --secondary-color: #000;
+  --background-dark: #121212;
+  --background-light: #ffffff;
+  --accent-color: #000;
+  --card-bg: #1a1a1a;
+  --text-dark: #fff;
+  --text-light: #000;
+  --imdb-orange: #f5c518;
+  --imdb-dark: #000;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-roboto);
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  padding-top: 80px; /* Adjust based on your header’s height */
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background-color: var(--imdb-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Increased z-index */
+}
+
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Search Bar */
+.search {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px 20px;
+  transform: translateY(150%);
+  border-radius: 25px;
+  border: 2px solid var(--primary-color);
+  background: var(--card-bg);
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.search button {
+  position: absolute;
+  right: -45px;
+  top: 10%;
+  transform: translateY(80%);
+  background: var(--primary-color);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 5%;
+  margin-top: 80px;
+}
+
+.movie-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 1rem;
+}
+
+.movie-title {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+.movie-year {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.download-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--primary-color);
+  color: var(--imdb-dark);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  display: none;
+}
+
+.movie-card:hover .download-btn {
+  display: block;
+}
+
+/* Movie Details */
+.movie-details {
+  padding: 100px 5% 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-poster {
+  width: 300px;
+  float: left;
+  margin-right: 2rem;
+}
+
+/* Footer */
+.footer {
+ 
+  padding: 2rem 5%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Dark/Light Mode Adjustments */
+.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.light-mode .movie-card {
+  background: #f5f5f5;
+}
+
+.light-mode .movie-title {
+  color: var(--text-light);
+}
